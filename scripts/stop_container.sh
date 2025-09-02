@@ -2,5 +2,5 @@
 set -e
 
 echo "Stopping and removing all running containers..."
-containerid=`docker ps | awk -F " " '{print $1}'`
+containerid=`docker ps -q`
 docker rm -f $containerid
